@@ -1,0 +1,12 @@
+---
+
+nxlog_version: 2.9.1504
+
+nxlog_pkg_url: "http://nxlog.org/system/files/products/files/1/nxlog-ce-{{nxlog_version}}_rhel6.x86_64.rpm"
+nxlog_pkg_name: "{{nxlog_pkg_url}}"
+nxlog_pkg_state: present
+
+nxlog_svc_name: nxlog
+nxlog_svc_state: started
+nxlog_svc_enabled: true
+

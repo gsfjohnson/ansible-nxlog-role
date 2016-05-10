@@ -1,0 +1,14 @@
+---
+
+- name: install pkg
+  yum:
+    name: "{{nxlog_pkg_name}}"
+    state: "{{nxlog_pkg_state}}"
+
+- name: service state, enabled
+  service:
+    name: "{{nxlog_svc_name}}"
+    state: "{{nxlog_svc_state}}"
+    enabled: "{{nxlog_svc_enabled}}"
+  when: nxlog_pkg_state != 'absent'
+
